@@ -8,78 +8,179 @@
 
 
     <script type="text/javascript">
+    
         function cokeFunc() {
             var price = document.getElementById("cprice").innerText;
             var name = document.getElementById("cname").innerHTML;
+            var quantity = document.getElementById("cquantity").value;
 
-            var a = document.getElementById("item").value = name;
-            var b =  document.getElementById("itemprice").value = price;
+            var total = price * quantity;
+            var a = document.getElementById("item").value 
+            var b = document.getElementById("itemprice").value;
+ 
+            if (document.getElementById("item").value.length != 0) {
+                document.getElementById("item").value = a + ' ; ' + name;   
+                c = document.getElementById("itemprice").value = Number(b) + total;
+                // console.log(a);
+                console.log(c);
+                return c
+            }
+            else{
+                document.getElementById("item").value =  name;   
+
+                var total = price * quantity;
+                var b = document.getElementById("itemprice").value =  total;
+
+            }
                  
         }
         function fantaFunc() {
             var price = document.getElementById("fprice").innerText;
             var name = document.getElementById("fname").innerHTML;
+            var quantity = document.getElementById("fquantity").value;
 
-            var a = document.getElementById("item").value = name;
-            var b =  document.getElementById("itemprice").value = price;
+            var total = price * quantity;
+            var a = document.getElementById("item").value 
+            var b = document.getElementById("itemprice").value;
+ 
+            if (document.getElementById("item").value.length != 0) {
+                document.getElementById("item").value = a + ' ; ' + name;   
+                c = document.getElementById("itemprice").value = Number(b) + total;
+                // console.log(a);
+                console.log(c);
+                return c
+            }
+            else{
+                document.getElementById("item").value =  name;   
+
+                var total = price * quantity;
+                var b = document.getElementById("itemprice").value =  total;
+
+            }
+                 e;
                  
         }
         function fantazeroFunc() {
             var price = document.getElementById("fzprice").innerText;
             var name = document.getElementById("fzname").innerHTML;
+            var quantity = document.getElementById("fzquantity").value;
 
-            var a = document.getElementById("item").value = name;
-            var b =  document.getElementById("itemprice").value = price;
-                 
+            var total = price * quantity;
+            var a = document.getElementById("item").value 
+            var b = document.getElementById("itemprice").value;
+ 
+            if (document.getElementById("item").value.length != 0) {
+                document.getElementById("item").value = a + ' ; ' + name;   
+                c = document.getElementById("itemprice").value = Number(b) + total;
+                // console.log(a);
+                console.log(c);
+                return c
+            }
+            else{
+                document.getElementById("item").value =  name;   
+
+                var total = price * quantity;
+                var b = document.getElementById("itemprice").value =  total;
+
+            }
         }
         function sevenFunc() {
             var price = document.getElementById("sprice").innerText;
             var name = document.getElementById("sname").innerHTML;
+            var quantity = document.getElementById("squantity").value;
+        
+            var total = price * quantity;
+            var a = document.getElementById("item").value 
+            var b = document.getElementById("itemprice").value;
+ 
+            if (document.getElementById("item").value.length != 0) {
+                document.getElementById("item").value = a + ' ; ' + name;   
+                c = document.getElementById("itemprice").value = Number(b) + total;
+                // console.log(a);
+                console.log(c);
+                return c
+            }
+            else{
+                document.getElementById("item").value =  name;   
 
-            var a = document.getElementById("item").value = name;
-            var b =  document.getElementById("itemprice").value = price;
+                var total = price * quantity;
+                var b = document.getElementById("itemprice").value =  total;
+
+            }
                  
         }
         function pepsiFunc() {
             var price = document.getElementById("pprice").innerText;
             var name = document.getElementById("pname").innerHTML;
+            var quantity = document.getElementById("pquantity").value;
 
-            var a = document.getElementById("item").value = name;
-            var b =  document.getElementById("itemprice").value = price;
-                 
+            var total = price * quantity;
+            var a = document.getElementById("item").value 
+            var b = document.getElementById("itemprice").value;
+ 
+            if (document.getElementById("item").value.length != 0) {
+                document.getElementById("item").value = a + ' ; ' + name;   
+                c = document.getElementById("itemprice").value = Number(b) + total;
+                // console.log(a);
+                console.log(c);
+                return c
+            }
+            else{
+                document.getElementById("item").value =  name;   
+
+                var total = price * quantity;
+                var b = document.getElementById("itemprice").value =  total;
+
+            }
+                      
         }
         function spriteFunc() {
             var price = document.getElementById("spprice").innerText;
             var name = document.getElementById("spname").innerHTML;
+            var quantity = document.getElementById("spquantity").value;
 
-            var a = document.getElementById("item").value = name;
-            var b =  document.getElementById("itemprice").value = price;
+            var total = price * quantity;
+            var a = document.getElementById("item").value 
+            var b = document.getElementById("itemprice").value;
+ 
+            if (document.getElementById("item").value.length != 0) {
+                document.getElementById("item").value = a + ' ; ' + name;   
+                c = document.getElementById("itemprice").value = Number(b) + total;
+                // console.log(a);
+                console.log(c);
+                return c
+            }
+            else{
+                document.getElementById("item").value =  name;   
+
+                var total = price * quantity;
+                var b = document.getElementById("itemprice").value =  total;
+
+            }
+                 
                  
         }
 
         function checkOut() {
-            var quantity = document.getElementById("quantity").value;
+            // var quantity = document.getElementById("quantity").value;
             var price = document.getElementById("itemprice").value;
-
-            var total = quantity * price;
-            document.getElementById("money").value = total;
-            
+            price = Number(price);
             var ymoney = document.getElementById("ymoney").value;
-
+            ymoney = Number(ymoney);
             if (ymoney == "") {
                 alert("Please enter your monetary value");
             }
             else{
-                if (ymoney < total) {
+                if (ymoney < price) {
                     alert("Insufficient money to purchase from this machine");
                 }
                 else{
-                    if (total == ymoney) {
-                        var check = total - ymoney;
+                    if (price == ymoney) {
+                        var check = price - ymoney;
                         alert("Money equals product value")   
                     }
-                    else if (ymoney > total) {
-                        var check = ymoney - total;
+                    else if (ymoney > price) {
+                        var check = ymoney - price;
                         alert("Your change is "+check+". Thank you for shopping with us. ");
 
                         document.getElementById("changed").value = check;
@@ -88,10 +189,13 @@
                 }
             }
         }
-        // }
-        // else{
-
-        // }
+        
+        function clearAll() {
+            document.getElementById("itemprice").value = "";
+            document.getElementById("ymoney").value = "";
+            document.getElementById("item").value = "";
+            document.getElementById("changed").value = "";
+        }
     </script>
     </head>
 
@@ -101,8 +205,7 @@
                 <div class="row "> 
                     <div class="col-lg-8 col-sm-12 lefted" style="background-color: #eeeeee;">
                         <div class="row goods">
-                            <!-- <h2 class=""><img src="images/name.png" alt="Name"></h2>
-                            <img src="images/coke.png" alt="Goods" class="goods"></div> -->
+                             <h2 class=""><img src="images/name.png" alt="Name"></h2>
                             <div class="col-lg-4 col-md-4 mb-4 mb-lg-0 singular">
                                 <!-- Card-->
                                 <div class="card rounded shadow-sm border-0">
@@ -110,7 +213,10 @@
                                         <span class="badge text-dark" id="cprice">200</span>
                                         <img src="images/coke.png" alt="" class="" style="height: 100px;">
                                         <h5 id="cname"> Coke</h5>
-                                    <button class="btn btn-danger" id="buycoke" onclick="return cokeFunc()">Buy</button>
+                                        <div class="quantity">
+                                            <input type="number" class="form-control" value="1" id="cquantity" name="quantity" min="1" max="5">
+                                        </div><br>
+                                    <button class="btn btn-danger" id="buycoke" onclick="return cokeFunc()">Add</button>
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +228,10 @@
                                         <span class="badge text-dark" id="fprice">250</span>
                                         <img src="images/fanta.png" alt="" class="" style="height: 100px;">
                                         <h5 id="fname">Fanta</h5>
-                                    <button class="btn btn-danger" onclick="return fantaFunc()">Buy</button>
+                                        <div class="quantity">
+                                            <input type="number" class="form-control" value="1" id="fquantity" name="quantity" min="1" max="5">
+                                        </div><br>
+                                    <button class="btn btn-danger" onclick="return fantaFunc()">Add</button>
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +243,10 @@
                                         <span class="badge text-dark" id="fzprice">200</span>
                                         <img src="images/fantazero.png" alt="" class="" style="height: 100px;">
                                         <h5 id="fzname">Fanta Zero</h5>
-                                    <button class="btn btn-danger" onclick="return fantazeroFunc()">Buy</button>
+                                        <div class="quantity">
+                                            <input type="number" class="form-control" value="1" id="fzquantity" name="quantity" min="1" max="5">
+                                        </div><br>
+                                    <button class="btn btn-danger" onclick="return fantazeroFunc()">Add</button>
                                     </div>
                                 </div>
                             </div>
@@ -146,7 +258,10 @@
                                         <span class="badge text-dark" id="sprice">230</span>
                                         <img src="images/seven.png" alt="" class="" style="height: 100px;">
                                             <h5 id="sname">7-UP</h5>
-                                           <button class="btn btn-danger" onclick="return sevenFunc()">Buy</button>
+                                            <div class="quantity">
+                                                <input type="number" class="form-control" value="1" id="squantity" name="quantity" min="1" max="5">
+                                            </div><br>
+                                           <button class="btn btn-danger" onclick="return sevenFunc()">Add</button>
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +273,10 @@
                                         <span class="badge text-dark" id="pprice">150</span>
                                         <img src="images/pepsi.png" alt="" class="" style="height: 100px;">
                                         <h5 id="pname">Pepsi</h5>
-                                        <button class="btn btn-danger" onclick="return pepsiFunc()">Buy</button>
+                                        <div class="quantity">
+                                            <input type="number" class="form-control" value="1" id="pquantity" name="quantity" min="1" max="5">
+                                        </div><br>
+                                        <button class="btn btn-danger" onclick="return pepsiFunc()">Add</button>
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +288,10 @@
                                         <span class="badge text-dark" id="spprice">500</span>
                                         <img src="images/sprite.png" alt="" class="" style="height: 100px;">
                                         <h5 id="spname"> Sprite</h5>
-                                         <button class="btn btn-danger" onclick="return spriteFunc()">Buy</button>
+                                        <div class="quantity">
+                                            <input type="number" class="form-control" value="1" id="spquantity" name="quantity" min="1" max="5">
+                                        </div><br>
+                                         <button class="btn btn-danger" onclick="return spriteFunc()">Add</button>
                                     </div>
                                 </div>
                             </div>
@@ -184,29 +305,23 @@
                                <input type="text" class="form-control" id="item" readonly>
                            </div>
                            <div class="itemed right col-lg-12 ">
-                            <h3>Item Price</h3>
+                            <h3>Accumulated Total</h3>
                             <input type="text" class="form-control" id="itemprice" readonly>
                         </div>
-                           <div class="quantity right col-lg-12">
-                               <h3>Quantity</h3>
-                               <input type="number" class="form-control" value="1" id="quantity" name="quantity" min="1" max="5">
-                           </div>
-                           <div class="money right col-lg-12">
-                               <h3>Total</h3>
-                               <input type="text" class="form-control" id="money" readonly>
-                           </div>
+                     
                            <div class="money right col-lg-12">
                                 <h3>Your Money</h3>
                                 <input type="text" class="form-control" id="ymoney">
                             </div>
                            <div class="checkout right col-lg-12">
                                <button class="btn btn-success" value="Buttoned" id="checkout" onclick="return checkOut()">CHECKOUT</button>
+                               <button class="btn btn-danger" value="Buttoned" id="checkout" onclick="return clearAll()">Clear</button>
                            </div>
                            <div class="changed right col-lg-12">
                                <h3>CHANGE</h3>
                                <input type="text" class="form-control" id="changed" readonly>
                            </div>
-   
+
                        </div>
                     </div>
                 </div>    
@@ -260,7 +375,7 @@
             height: 100%;
         }
         .singular {
-            margin-top: 40px;
+            margin-top: 20px;
         }
         .badge {
             position: relative;
